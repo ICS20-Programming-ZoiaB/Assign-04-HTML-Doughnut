@@ -1,0 +1,29 @@
+/* Created by: ZoiaB
+* Created on: Apr 2023
+* This CSS file defines the style for index.html
+* ICS2O-Assign-04-HTML-DoughnutOrder
+*/
+
+body {
+  width: 80%;
+  margin: 5% 10%;
+  background-color: #d6c7d1;
+}
+
+h1 {
+  background-color: #df209f;
+}
+
+p {
+  margin-left: 30px;
+  color: #ff00aa;
+}
+
+h4 {
+  color: #3ca8aa;
+  font-weight: bold;
+}
+
+th {
+  font-size: 17px;
+}
