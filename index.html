@@ -17,11 +17,11 @@
    
    <!-- Code for the MDL -->
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-red.min.css">
 
-   <!-- Link to CSS file -->
+   <!-- Stylesheet -->
    <link rel="stylesheet" href="./css/style.css">
-   
+   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-light_blue.min.css" />
+
    <!-- Title -->
    <title>Doughnut Order</title>
  </head>
@@ -38,125 +38,125 @@
    <img src="./images/doughnuts.jpg" alt="Doughnuts" width="400" length="400">
      
    <!-- Text for welcome message -->
+   <br><br>
    <p>Welcome to our doughnut ordering webpage! Below are different sizes and toppings so that you can customize your doughnut.</p>
 
    <!-- Table for placing the menu/prices and user order side-by-side -->
-         <h4>Our Menu and Prices:</h4>
+   <h4>Our Menu and Prices:</h4>
 
-         <!-- Table listing sizes -->
-         <table>
-           <tr>
-             <th class="border">Size</th>
-             <th class="border">Price</th>
-           </tr>
-           <tr>
-             <td class="border">Small</td>
-             <td class="border">$2.00</td>
-           </tr>
-           <tr>
-             <td class="border">Medium</td>
-             <td class="border">$3.00</td>
-           </tr>
-           <tr>
-             <td class="border">Large</td>
-             <td class="border">$4.00</td>
-           </tr>
-           <tr>
-             <td class="border">Frozen drink</td>
-             <td class="border">$3.00 each</td>
-           </tr>
-         </table>
+     <!-- Table listing sizes -->
+     <table>
+       <tr>
+         <th class="border">Size</th>
+         <th class="border">Price</th>
+       </tr>
+       <tr>
+         <td class="border">Small</td>
+         <td class="border">$2.00</td>
+       </tr>
+       <tr>
+         <td class="border">Medium</td>
+         <td class="border">$3.00</td>
+       </tr>
+       <tr>
+         <td class="border">Large</td>
+         <td class="border">$4.00</td>
+       </tr>
+       <tr>
+         <td class="border">Frozen drink</td>
+         <td class="border">$3.00 each</td>
+       </tr>
+     </table>
 
-        <!-- Table listing toppings -->
-         <br><br>
-         <table>
-           <tr>
-             <th class="border">Topping</th>
-             <th class="border">Price</th>
-           </tr>
-           <tr>
-             <td class="border">Sprinkles</td>
-             <td class="border">$0.50</td>
-           </tr>
-           <tr>
-             <td class="border">Chocolate shavings</td>
-             <td class="border">$0.50</td>
-           </tr>
-           <tr>
-             <td class="border">Skor bits</td>
-             <td class="border">$0.50</td>
-           </tr>
-           <tr>
-             <td class="border">Caramel syrup</td>
-             <td class="border">$0.50</td>
-           </tr>
-         </table>
-
-         <!-- Adding div for results under the menu for style - displayed beside user order -->
-         <h4>Choose size:</h4>
-         <div id="results"></div>
-       </td>
-
-        <!-- Form for user input -->
-        <form action="javascript:orderSent()">
-
-             <!-- Multiple choice - picking a meat type -->
-             <label for="size">Choose a size for the doughnut</label>
-             <select id="size" name="size">
-               <option value="0">-- Size --</option>
-               <option value="small">Small</option>
-               <option value="medium">Medium</option>
-               <option value="large">Large</option>
-             </select><br><br>
-
-             <!-- Multiple choice - picking a sandwich size -->
-             <label for="flavour">Choose a flavour</label>
-             <select id="flavour" name="flavour">
-               <option value="0">-- Flavour --</option>
-               <option value="vanilla">Vanilla</option>
-               <option value="chocolate">Chocolate</option>
-             </select>
-        
-             <!-- MDL checkboxes for toppings -->
-             <h5>Choose Your Toppings:</h5>
-          
-             <!-- First checkbox - sprinkles -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Sprinkles</span>
-               <input type="checkbox" id="sprinkles" name="sprinkles" class="mdl-checkbox__input"><br><br>
-             </label>
-
-             <!--Second checkbox - chocolate shavings -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Chocolate Shavings</span>
-               <input type="checkbox" id="chocolate shavings" name="chocolate shavings" class="mdl-checkbox__input"><br><br>
-             </label>
-
-             <!-- Third checkbox - skor bits -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Skor bits</span>
-               <input type="checkbox" id="skor bits" name="skor bits" class="mdl-checkbox__input"><br><br>
-             </label>
-
-             <!-- Fourth checkbox - caramel syrup -->
-             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-               <span class="mdl-checkbox__label">Caramel syrup</span>
-               <input type="checkbox" id="caramel syrup" name="caramel syrup" class="mdl-checkbox__input"><br><br>
-             </label>
-
-             <!-- MDL number input with floating label for garlic potato side -->
-             <h5>Choose Your Sides</h5>
-             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-               <input class="mdl-textfield__input" type="number" id="drinks" step="1" value="0" min="0" max="6" name="drinks">
-               <label class="mdl-textfield__label" for="drinks">Pick a number of drinks:</label>
-             </div><br>
-
-             <!-- Adding id to submit button for styling -->
-             <input type="submit" id="red" value="Submit Your Order" button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-           </form>
-         </div>
-       </td>
+   <!-- Table listing toppings -->
+   <br><br>
+   <table>
+     <tr>
+       <th class="border">Topping</th>
+       <th class="border">Price</th>
+     </tr>
+     <tr>
+       <td class="border">Sprinkles</td>
+       <td class="border">$0.50</td>
+     </tr>
+     <tr>
+       <td class="border">Chocolate shavings</td>
+       <td class="border">$0.50</td>
+     </tr>
+     <tr>
+       <td class="border">Skor bits</td>
+       <td class="border">$0.50</td>
+     </tr>
+     <tr>
+       <td class="border">Caramel syrup</td>
+       <td class="border">$0.50</td>
      </tr>
    </table>
+   
+   <!-- Form for user input -->
+   <form action="javascript:orderSent()">
+     
+     <!-- Multiple choice - picking a doughnut size and drink type -->
+     <h4>Choose size of doughnut:</h4>
+     <label for="size">Choose a size for the doughnut</label>
+     <select id="size" name="size">
+       <option value="0">-- Size --</option>
+       <option value="small">Small</option>
+       <option value="medium">Medium</option>
+       <option value="large">Large</option>
+     </select><br><br>
+     
+     <!-- MDL checkboxes for Drink -->
+     <h4>Choose Your Doughnut Toppings:</h4>
+     
+       <!-- First checkbox - Sprinkles -->
+       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+         <span class="mdl-checkbox__label">Sprinkles</span>
+         <input type="checkbox" id="sprinkles" name="sprinkles" class="mdl-checkbox__input"><br><br>
+       </label>
+  
+       <!--Second checkbox - Chocolate Shavings -->
+       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+         <span class="mdl-checkbox__label">Chocolate shavings</span>
+         <input type="checkbox" id="chocolate-shavings" name="chocolate-shavings" class="mdl-checkbox__input"><br><br>
+       </label>
+       
+       <!-- Third checkbox - Skor bits -->
+       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+         <span class="mdl-checkbox__label">Skor bits</span>
+         <input type="checkbox" id="skor-bits" name="skor-bits" class="mdl-checkbox__input"><br><br>
+       </label>
+       
+       <!-- Fourth checkbox - Caramel syrup -->
+       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+         <span class="mdl-checkbox__label">Caramel syrup</span>
+         <input type="checkbox" id="caramel-syrup" name="caramel-syrup" class="mdl-checkbox__input"><br><br>
+       </label>
+     
+     <!-- Multiple choice - drink type -->
+     <h4>Choose type of drink:</h4>
+     <label for="drink">Choose drink type</label>
+     <select id="drink" name="drink">
+       <option value="0">-- Flavour --</option>
+       <option value="mango">Mango</option>
+       <option value="oreo">Oreo</option>
+       <option value="fudge">Fudge</option>
+       <option value="raspberry">Raspberry</option>
+     </select>
+     
+     <!-- MDL number input with floating label for drink -->
+     <h4>Choose number of drinks</h4>
+     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+       <input class="mdl-textfield__input" type="number" id="drinks-number" step="1" value="0" min="0" max="6" name="drinks-number">
+       <label class="mdl-textfield__label" for="drinks-number">Pick a number of drinks:</label>
+     </div>
+     <br>
+     
+     <!-- Submit button styling -->
+     <input type="submit" id="submit" value="Submit Your Order" button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+     
+     <!--Div for results-->
+     <div id="results"></div>
+   </form>
  </body>
 </html>
