@@ -6,7 +6,7 @@
 
 "use strict"
 
-function orderSent() {
+function OrderSent() {
 
  //setting a constant for tax
  const HST = 0.13;
@@ -45,7 +45,6 @@ function orderSent() {
  const UNIT_PRICE_TOPPINGS = 0.50;
  let costToppings = numToppings * UNIT_PRICE_TOPPINGS;
 
-  
  //constant and variables for drink
  const UNIT_PRICE_DRINKS = 3.00;
  let costDrinks = numDrinks * UNIT_PRICE_DRINKS;
