@@ -6,6 +6,7 @@
 
 "use strict"
 
+//defining funtion that takes user input and calculates cost
 function OrderSent() {
 
  //setting a constant for tax
@@ -23,23 +24,27 @@ function OrderSent() {
  //determining the cost of the base doughnut using compound if/then statements
 
  //if the doughnut size is small
- if (doughnutSize == "small") {
+ if (doughnutSize == small) {
    baseDoughnutCost = 2.00;
  }
 
  //if the doughnut size is medium
- else if (doughnutSize == "medium") {
+ else if (doughnutSize == medium) {
    baseDoughnutCost = 3.00;
  }
 
  //if the doughnut size is large
- else if (doughnutSize == "large") {
+ else if (doughnutSize == large) {
    baseDoughnutCost = 4.00;
  }
 
+ else {
+   baseDoughnutCost = 0.00;
+ }
+
  //determining the number of checkboxes checked
- let checkboxes = document.querySelectorAll('input[type="checkbox-toppings"]:checked');
- let numToppings = checkboxes.length;
+  let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+let numToppings = checkboxes.length;
 
  //determining the cost of the toppings using a variable and a constant for the price
  const UNIT_PRICE_TOPPINGS = 0.50;
