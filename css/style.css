@@ -32,3 +32,11 @@ th {
 h1 {
   color: #998b7a;
 }
+
+#results {
+  padding: 30px;
+  background-color: #10322b;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20px;
+}

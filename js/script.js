@@ -14,32 +14,26 @@ function OrderSent() {
   
  //initializing variables
  let baseDoughnutCost = 0;
+ let doughnutSize = 0;
 
- //declaring variables for base doughnut and drink
- let small = document.getElementById("small").value;
- let medium = document.getElementById("medium").value;
- let large = document.getElementById("large").value;
- let numDrinks = parseInt(document.getElementById("drinks-number").value);
-
- //determining the cost of the base doughnut using compound if/then statements
+//declaring variables for base doughnut and drink
+ let size = document.getElementById("doughnutSize").value;
+  let numDrinks = parseInt(document.getElementById("drinks-number").value);
 
  //if the doughnut size is small
- if (doughnutSize == small) {
+ if (size == "small") {
    baseDoughnutCost = 2.00;
  }
 
  //if the doughnut size is medium
- else if (doughnutSize == medium) {
+ else if (size == "medium") {
    baseDoughnutCost = 3.00;
  }
 
- //if the doughnut size is large
- else if (doughnutSize == large) {
-   baseDoughnutCost = 4.00;
- }
 
+ //if the doughnut size is large
  else {
-   baseDoughnutCost = 0.00;
+   baseDoughnutCost = 4.00;
  }
 
  //determining the number of checkboxes checked
