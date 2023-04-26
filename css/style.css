@@ -5,14 +5,15 @@
 */
 
 body {
-  width: 80%;
-  margin: 5% 10%;
+  width: 100%;
+  margin: 10%;
   background-color: lightpink;
-  padding-left:90px
+  padding-left:90px;
 }
 
 h1 {
-  background-color: hsl(84deg 57% 84%)
+  background-color: hsl(84deg 57% 84%);
+  width: 60%;
 }
 
 p {
@@ -35,8 +36,9 @@ h1 {
 
 #results {
   padding: 30px;
-  background-color: #10322b;
+  background-color: #998b7a;
   font-weight: bold;
   color: #ffffff;
   margin-top: 20px;
+  width: 60%;
 }
