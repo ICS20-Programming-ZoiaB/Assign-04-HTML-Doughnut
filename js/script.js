@@ -6,6 +6,39 @@
 
 "use strict"
 
+//Function to disable toppings until doughnut is selected
+onchange="toggleToppings()"
+function toggleToppings() {
+  let sizeAble = document.getElementById("doughnutSize").value;
+
+  if (sizeAble !== "0") {
+    document.getElementById("sprinkles").disabled = false;
+    document.getElementById("chocolate-shavings").disabled = false;
+    document.getElementById("skor-bits").disabled = false;
+    document.getElementById("caramel-syrup").disabled = false;
+  } 
+  else {
+    document.getElementById("sprinkles").disabled = true;
+    document.getElementById("chocolate-shavings").disabled = true;
+    document.getElementById("skor-bits").disabled = true;
+    document.getElementById("caramel-syrup").disabled = true;
+  }
+}
+
+//Function to disable flavours until drink is selected
+onchange="toggleDrinks()"
+function toggleDrinks() {
+  let drinksAble = document.getElementById("drinks-number").value;
+
+  if (drinksAble !== "") {
+    document.getElementById("drinks-number").disabled = false;
+  } 
+  else {
+    document.getElementById("drinks-number").disabled = true;
+  }
+}
+
+
 //defining funtion that takes user input and calculates cost
 function OrderSent() {
 
@@ -18,7 +51,7 @@ function OrderSent() {
 
 //declaring variables for base doughnut and drink
  let size = document.getElementById("doughnutSize").value;
-  let numDrinks = parseInt(document.getElementById("drinks-number").value);
+ let numDrinks = parseInt(document.getElementById("drinks-number").value);
 
  //if the doughnut size is small
  if (size == "small") {
@@ -30,6 +63,10 @@ function OrderSent() {
    baseDoughnutCost = 3.00;
  }
 
+ //if the doughnut size is not selected
+  if (size == "0") {
+   baseDoughnutCost = 0.00;
+ }
 
  //if the doughnut size is large
  else {

@@ -99,7 +99,7 @@
      <!-- Multiple choice - picking a doughnut size and drink type -->
      <h4>Choose size of doughnut:</h4>
      <label for="doughnutSize">Choose a size for the doughnut</label>
-     <select id="doughnutSize" name="doughnutSize">
+     <select id="doughnutSize" name="doughnutSize" onchange="toggleToppings()">
        <option value="0">-- Size --</option>
        <option value="small">Small</option>
        <option value="medium">Medium</option>
@@ -112,31 +112,31 @@
        <!-- First checkbox - Sprinkles -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Sprinkles</span>
-         <input type="checkbox" id="sprinkles" name="sprinkles" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="sprinkles" name="sprinkles" class="mdl-checkbox__input" disabled><br><br>
        </label>
   
        <!--Second checkbox - Chocolate Shavings -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Chocolate shavings</span>
-         <input type="checkbox" id="chocolate-shavings" name="chocolate-shavings" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="chocolate-shavings" name="chocolate-shavings" class="mdl-checkbox__input" disabled><br><br>
        </label>
        
        <!-- Third checkbox - Skor bits -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Skor bits</span>
-         <input type="checkbox" id="skor-bits" name="skor-bits" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="skor-bits" name="skor-bits" class="mdl-checkbox__input" disabled><br><br>
        </label>
        
        <!-- Fourth checkbox - Caramel syrup -->
        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
          <span class="mdl-checkbox__label">Caramel syrup</span>
-         <input type="checkbox" id="caramel-syrup" name="caramel-syrup" class="mdl-checkbox__input"><br><br>
+         <input type="checkbox" id="caramel-syrup" name="caramel-syrup" class="mdl-checkbox__input" disabled><br><br>
        </label>
      
      <!-- Multiple choice - drink type -->
      <h4>Choose type of drink:</h4>
      <label for="drink">Choose drink type</label>
-     <select id="drink" name="drink">
+     <select id="drink" name="drink" onchange="toggleDinks()">
        <option value="0">-- Flavour --</option>
        <option value="mango">Mango</option>
        <option value="oreo">Oreo</option>
@@ -147,7 +147,7 @@
      <!-- MDL number input with floating label for drink -->
      <h4>Choose number of drinks</h4>
      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-       <input class="mdl-textfield__input" type="number" id="drinks-number" step="1" value="0" min="0" max="6" name="drinks-number">
+       <input class="mdl-textfield__input" type="number" id="drinks-number" step="1" value="0" min="0" max="6" name="drinks-number" disabled>
        <label class="mdl-textfield__label" for="drinks-number">Pick a number of drinks:</label>
      </div>
      <br>
