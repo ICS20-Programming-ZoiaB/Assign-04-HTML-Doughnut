@@ -5,16 +5,15 @@
 */
 
 body {
-  width: 100%;
   background-color: lightpink;
-  padding-left: 90px;
+  padding-left: 20px; padding-right: 20px;
 }
 
 h1 {
   background-color: hsl(84deg 57% 84%);
-  width: 60%;
   color: #998b7a;
-  padding-left: 100px;
+  padding: 40px;
+  text-align: center;
 }
 
 p {
@@ -35,7 +34,7 @@ th {
   padding: 30px;
   background-color: #998b7a;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   margin-top: 20px;
-  width: 60%;
+  width: 95%;
 }

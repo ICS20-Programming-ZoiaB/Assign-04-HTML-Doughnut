@@ -25,63 +25,29 @@ function toggleToppings() {
   }
 }
 
-//Function to disable flavours until drink is selected
-onchange="toggleDrinks()"
-function toggleDrinks() {
-  let drinksAble = document.getElementById("drinks-number").value;
-
-  if (drinksAble !== "") {
-    document.getElementById("drinks-number").disabled = false;
-  } 
-  else {
-    document.getElementById("drinks-number").disabled = true;
-  }
-}
-
-
-
-document.getElementById("drink").disabled = false;
-document.getElementById("flavor").addEventListener("change", function() {
-  // Get the selected flavor
-  let flavor = this.value;
-  
-  // Update the price and image based on the selected flavor
-  document.getElementById("price").innerHTML = prices[flavor];
-  document.getElementById("image").src = images[flavor];
-  
-  // Enable the drink select element
-  document.getElementById("drink").disabled = false;
-});
-
-
-
-
-
-
-
-
 //defining funtion that takes user input and calculates cost
 function OrderSent() {
-
- //setting a constant for tax
- const HST = 0.13;
-const UNIT_PRICE_TOPPINGS = 0.50;
+  
+  //setting a constant for tax
+  const HST = 0.13;
+  const UNIT_PRICE_TOPPINGS = 0.50;
   const UNIT_PRICE_DRINKS = 3.00;
   
- //initializing variables
+  //initializing variables
  let baseDoughnutCost = 0;
  let doughnutSize = 0;
 
 //declaring variables for base doughnut and drink
- let size = document.getElementById("doughnutSize").value;
- let numDrinks = parseInt(document.getElementById("drinks-number").value);
-
- //if the doughnut size is small
- if (size == "small") {
-   baseDoughnutCost = 2.00;
+let size = document.getElementById("doughnutSize").value;
+let numDrinks = parseInt(document.getElementById("drinks-number").value);
+let drink = document.getElementById("drink").value;
+  
+//if the doughnut size is small
+  if (size == "small") {
+    baseDoughnutCost = 2.00;
  }
-
- //if the doughnut size is medium
+    
+//if the doughnut size is medium
  else if (size == "medium") {
    baseDoughnutCost = 3.00;
  }
@@ -102,6 +68,11 @@ let numToppings = checkboxes.length;
 
  //calculating cost of toppings
  let costToppings = numToppings * UNIT_PRICE_TOPPINGS;
+
+   //Set number of drinks to zero if user does not select a flavour
+ if (drink == "" || drink == "0") {
+  numDrinks = 0;
+}
 
  //calculating cost of drinks
  let costDrinks = numDrinks * UNIT_PRICE_DRINKS;
