@@ -9,7 +9,7 @@
 //Function to disable toppings until doughnut is selected
 onchange="toggleToppings()"
   function toggleToppings() {
-    let sizeAble = document .getElementById("doughnutSize").value;
+    let sizeAble = document .getElementById("doughnut-size").value;
   
   if (sizeAble !== "0") {
     document.getElementById("sprinkles").disabled = false;
@@ -38,7 +38,7 @@ let baseDoughnutCost = 0;
 let doughnutSize = 0;
   
 //declaring variables for base doughnut and drink
-let size = document.getElementById("doughnutSize").value;
+let size = document.getElementById("doughnut-size").value;
 let numDrinks = parseInt(document.getElementById("drinks-number").value);
 let drink = document.getElementById("drink").value;
 
