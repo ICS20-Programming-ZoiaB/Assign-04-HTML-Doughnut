@@ -40,12 +40,10 @@ function toggleDrinks() {
 
 
 
-
-
 document.getElementById("drink").disabled = false;
 document.getElementById("flavor").addEventListener("change", function() {
   // Get the selected flavor
-  var flavor = this.value;
+  let flavor = this.value;
   
   // Update the price and image based on the selected flavor
   document.getElementById("price").innerHTML = prices[flavor];
@@ -67,6 +65,8 @@ function OrderSent() {
 
  //setting a constant for tax
  const HST = 0.13;
+const UNIT_PRICE_TOPPINGS = 0.50;
+  const UNIT_PRICE_DRINKS = 3.00;
   
  //initializing variables
  let baseDoughnutCost = 0;
@@ -100,12 +100,10 @@ function OrderSent() {
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
 let numToppings = checkboxes.length;
 
- //determining the cost of the toppings using a variable and a constant for the price
- const UNIT_PRICE_TOPPINGS = 0.50;
+ //calculating cost of toppings
  let costToppings = numToppings * UNIT_PRICE_TOPPINGS;
 
- //constant and variables for drink
- const UNIT_PRICE_DRINKS = 3.00;
+ //calculating cost of drinks
  let costDrinks = numDrinks * UNIT_PRICE_DRINKS;
 
  //calculating the subtotal, tax and total
@@ -114,5 +112,5 @@ let numToppings = checkboxes.length;
  let total = subtotal + tax;
 
  //displaying the totals to the screen
- document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + Math.round(total * 100) /100; + ".";
+ document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + Math.round(total * 100) /100 + ".";
 }
