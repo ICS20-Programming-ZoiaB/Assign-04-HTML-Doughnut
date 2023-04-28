@@ -39,6 +39,29 @@ function toggleDrinks() {
 }
 
 
+
+
+
+document.getElementById("drink").disabled = false;
+document.getElementById("flavor").addEventListener("change", function() {
+  // Get the selected flavor
+  var flavor = this.value;
+  
+  // Update the price and image based on the selected flavor
+  document.getElementById("price").innerHTML = prices[flavor];
+  document.getElementById("image").src = images[flavor];
+  
+  // Enable the drink select element
+  document.getElementById("drink").disabled = false;
+});
+
+
+
+
+
+
+
+
 //defining funtion that takes user input and calculates cost
 function OrderSent() {
 
@@ -64,7 +87,7 @@ function OrderSent() {
  }
 
  //if the doughnut size is not selected
-  if (size == "0") {
+  else if (size == "0") {
    baseDoughnutCost = 0.00;
  }
 
@@ -91,5 +114,5 @@ let numToppings = checkboxes.length;
  let total = subtotal + tax;
 
  //displaying the totals to the screen
- document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
+ document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of HST added is $" + tax.toFixed(2) + ".<br>Your total is $" + Math.round(total * 100) /100; + ".";
 }
